@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sansha Hotel Wonosari</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+}
+
+header {
+    background: url('hotel-depan.jpg') center/cover no-repeat;
+    height: 90vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0,0,0,0.5);
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+header p {
+    font-size: 20px;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.gallery img {
+    width: 250px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+footer {
+    background: #0d47a1;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Sansha Hotel</h1>
+    <p>Nyaman, Bersih, Strategis di Wonosari</p>
+    <button class="btn" onclick="waBooking()">Booking via WhatsApp</button>
+</header>
+
+<nav>
+    <a href="#room">Room</a>
+    <a href="#fasilitas">Fasilitas</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#lokasi">Lokasi</a>
+</nav>
+
+<section id="room">
+    <h2>Room Rate</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Deluxe Double</h3>
+            <p>Rp 300.000 / malam</p>
+        </div>
+        <div class="card">
+            <h3>Deluxe Twin</h3>
+            <p>Rp 300.000 / malam</p>
+        </div>
+    </div>
+    <p>Tambahan Breakfast Rp 35.000 (2 orang)</p>
+</section>
+
+<section id="fasilitas">
+    <h2>Fasilitas</h2>
+    <p>AC, TV, Shower Air Panas, Wifi, Air Mineral, Kopi & Teh, Kettle, Amenities lengkap</p>
+</section>
+
+<section id="galeri" class="gallery">
+    <h2>Galeri Hotel</h2>
+    <img src="hotel-depan.jpg">
+    <img src="kamar.jpg">
+    <img src="rooftop.jpg">
+    <img src="resepsionis.jpg">
+</section>
+
+<section id="lokasi">
+    <h2>Lokasi</h2>
+    <p>Jl. Jogja - Wonosari, Gunungkidul</p>
+    <iframe src="https://maps.google.com/maps?q=gunungkidul&t=&z=13&ie=UTF8&iwloc=&output=embed" width="80%" height="300"></iframe>
+</section>
+
+<footer>
+    <p>WhatsApp: 081220860090</p>
+    <p>Instagram: @sansha.hotel</p>
+    <p>Facebook: Sansha Hotel</p>
+    <p>TikTok: @sansha.hotel</p>
+</footer>
+
+<script>
+function waBooking() {
+    let pesan = "Halo, saya ingin booking kamar di Sansha Hotel";
+    window.open("https://wa.me/6281220860090?text=" + encodeURIComponent(pesan));
+}
+</script>
+
+</body>
+</html>
